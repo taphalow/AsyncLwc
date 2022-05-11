@@ -1,11 +1,19 @@
 import { LightningElement, track } from 'lwc';
 import getAll from '@salesforce/apex/AccountController.getAll';
 
+const COLS = [
+    { label: 'ID', fieldName: 'Id', editable: false },
+    { label: 'Name', fieldName: 'Name', editable: false },
+    { label: 'Company', fieldName: 'Company' }
+];
+
 export default class AsyncDemo extends LightningElement {
 
     @track isLoaded = false;
     @track accounts;
     @track error;
+
+    columns = COLS;
 
     connectedCallback() {
         getAll()
