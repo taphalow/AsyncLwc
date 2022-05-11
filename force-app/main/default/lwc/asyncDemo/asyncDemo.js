@@ -8,8 +8,6 @@ const COLS = [
 ];
 
 export default class AsyncDemo extends LightningElement {
-
-    @track isLoaded = false;
     @track accounts;
     @track error;
 
@@ -29,9 +27,6 @@ export default class AsyncDemo extends LightningElement {
             .catch(error => {
                 this.error = error;
             })
-            .finally(() => {
-                this.isLoaded = true;
-            });
     }
 
     promiseFunc() {

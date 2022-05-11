@@ -1,14 +1,9 @@
 <template>
-    <template if:false={isLoaded}>
-        <lightning-spinner variant="brand" alternative-text="Loading..."></lightning-spinner>
-    </template>
-    <template if:true={isLoaded}>
-        <div style="height: 300px;">
-            <lightning-datatable
-                    key-field="id"
-                    data={accounts}
-                    columns={columns}>
-            </lightning-datatable>
-        </div>  
-    </template>
+    <div>
+        <lightning-datatable
+            key-field="id"
+            data={accounts}
+            columns={columns}>
+        </lightning-datatable>
+    </div>  
 </template>
