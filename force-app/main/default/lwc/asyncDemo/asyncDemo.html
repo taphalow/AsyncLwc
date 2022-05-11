@@ -1,3 +1,5 @@
 <template>
-    
+    <template if:false={isLoaded}>
+        <lightning-spinner variant="brand" alternative-text="Loading..."></lightning-spinner>
+    </template>
 </template>
