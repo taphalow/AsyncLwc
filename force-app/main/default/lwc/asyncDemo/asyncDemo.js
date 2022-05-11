@@ -3,8 +3,7 @@ import getAll from '@salesforce/apex/AccountController.getAll';
 
 const COLS = [
     { label: 'ID', fieldName: 'Id', editable: false },
-    { label: 'Name', fieldName: 'Name', editable: false },
-    { label: 'Company', fieldName: 'Company' }
+    { label: 'Name', fieldName: 'Name', editable: false }
 ];
 
 export default class AsyncDemo extends LightningElement {
